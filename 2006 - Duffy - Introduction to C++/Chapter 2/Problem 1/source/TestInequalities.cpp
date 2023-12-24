@@ -21,7 +21,7 @@ int main()
     cin >> c;
 
     // Two inputs
-    if (&c == "a")
+    if (&c == "a") // Why by reference?
     {
         cout << "Max value is: " << Max(d1, d2) << endl;
     }
