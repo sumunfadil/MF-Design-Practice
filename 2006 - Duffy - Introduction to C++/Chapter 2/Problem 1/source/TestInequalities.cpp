@@ -17,7 +17,7 @@ int main()
 
     // Min or max
     char c;
-    cout << "Which function a) Max() or b) Min()?";
+    cout << "Which function a) Max() or b) Min()? ";
     cin >> c;
 
     // Two inputs
@@ -32,7 +32,7 @@ int main()
 
     // Three inputs
     double dA = 1.0; double dB = 2.0; double dC = 3.0;
-    cout << "\n Max and min of three numbers: " << endl;
+    cout << "\n\nMax and min of three numbers: " << endl;
     cout << "Max value is: " << Max(dA, dB, dC) << endl;
     cout << "Min value is: " << Min(dA, dB, dC) << endl;
 
