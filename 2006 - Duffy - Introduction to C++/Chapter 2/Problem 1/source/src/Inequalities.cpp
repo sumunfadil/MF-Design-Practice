@@ -16,3 +16,14 @@ double Min(double x, double y)
     return y;
 }
 
+double Max(double x, double y, double z)
+{
+    return Max(x,y)<z?z:Max(x,y);
+}
+
+
+
+double Min(double x, double y, double z)
+{
+    return Min(Min(x,y), z);
+}
