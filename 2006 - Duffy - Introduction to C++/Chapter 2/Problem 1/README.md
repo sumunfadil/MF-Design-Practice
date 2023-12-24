@@ -16,11 +16,11 @@
 # Generate Binary file in `build` folder
 
 ## CMake commands
-1. cd to `build` folder
-2. Run CMake (MY DEFAULT)
+- cd to `build` folder
+- Run CMake (MY DEFAULT)
     a. cmake -GNinja ..\source\ (uses GCC by default)
     b. cmake --build .
-3. Run CMake (OPTIONS: GENERATORS)
+- Run CMake (OPTIONS: GENERATORS)
     a. Generate build files (cmake -G"generator_name" ..\source\)
         - MinGW generator
             - cmake -G "MinGW Makefiles" ..\source\
@@ -31,7 +31,7 @@
         - Simpler way (THE DEFAULT IS MinGW)
             - cmake ..\source\
     b. cmake --build .
-4. Run CMake (OPTIONS: COMPILERS)
+- Run CMake (OPTIONS: COMPILERS)
     a. Generate build files
         - MinGW generator
             - cmake -G"MinGW Makefiles" -D CMAKE_CXX_COMPILER=g++ ..\source\
@@ -40,7 +40,7 @@
             - cmake -GNinja CMAKE_CXX_COMPILER=g++ ..\source\
 		    - cmake -GNinja CMAKE_CXX_COMPILER=clang++ ..\source\
     b. cmake --build .
-5. Delete build folder (to use other generators or compilers)
+- Delete build folder (to use other generators or compilers)
     - rm -r ..\build\ or 
     - rm * (SAFER OPTION)
 
