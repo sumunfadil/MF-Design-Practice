@@ -2,8 +2,9 @@
 #define GETSTRING_HPP
 
 #include <string>
+using namespace std;
 
-template <typename T>
-    std::string getString(const T& value);
+template <typename T> 
+    string getString(const T& value);
 
 #endif /* GETSTRING_HPP */
