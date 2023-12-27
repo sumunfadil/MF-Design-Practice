@@ -62,6 +62,7 @@
 - `git status`
 - `git add .`
 - `git commit -m "comment"`
+- `git push`
 
 ## Starting on another machine to local folder
 - `git fetch` (ensure nothing new added)
