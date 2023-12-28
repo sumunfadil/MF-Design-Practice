@@ -6,13 +6,13 @@
 void EuropeanOption::init()
 {
     // Initialise default values
-    double r = 0.08;      
-    double sig = 0.30;    
-    double K = 65.0;      
-    double T = 0.25;      
-    double U = 60.0;            // U is stock price  
-    double b = r;               // Black-Scholes model (1973)
-    string optType = "C";       // European Call option
+    r = 0.08;      
+    sig = 0.30;    
+    K = 65.0;      
+    T = 0.25;      
+    U = 60.0;            // U is stock price  
+    b = r;               // Black-Scholes model (1973)
+    optType = "C";       // European Call option
 }
 
 void EuropeanOption::copy(const EuropeanOption& o2)
@@ -32,17 +32,20 @@ void EuropeanOption::copy(const EuropeanOption& o2)
 EuropeanOption::EuropeanOption()
 {
     // Default constructor
+    //cout << "Default constructor called!" << endl;
     init();
 }
 
 EuropeanOption::EuropeanOption(const EuropeanOption& option2)
 {
     // Copy constructor
+    //cout << "Copy constructor called!" << endl;
     copy(option2);
 }
 
 EuropeanOption::EuropeanOption(const string& optionType)
 {
+    //cout << "Constructor called!" << endl;
     init();
     optType = optionType;
 }
@@ -51,7 +54,7 @@ EuropeanOption::EuropeanOption(const string& optionType)
 
 EuropeanOption::~EuropeanOption()
 {
-    std::cout << "Destructor called!" << std::endl;
+    //std::cout << "Destructor called!" << std::endl;
 }
 
 // Assignment operator
@@ -64,7 +67,6 @@ EuropeanOption& EuropeanOption::operator = (const EuropeanOption& option2)
     copy(option2);
     return *this;
 }
-
 
 
 

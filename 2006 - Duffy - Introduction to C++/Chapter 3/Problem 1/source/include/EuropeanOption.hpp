@@ -2,6 +2,7 @@
 #define EUROPEANOPTION_HPP
 
 #include <string>
+#include <cmath>
 #include "MathFunctions.hpp"
 using namespace std;
 
