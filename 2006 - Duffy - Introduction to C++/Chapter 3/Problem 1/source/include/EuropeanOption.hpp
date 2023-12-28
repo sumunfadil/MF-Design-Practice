@@ -2,6 +2,7 @@
 #define EUROPEANOPTION_HPP
 
 #include <string>
+#include "MathFunctions.hpp"
 using namespace std;
 
 class EuropeanOption
