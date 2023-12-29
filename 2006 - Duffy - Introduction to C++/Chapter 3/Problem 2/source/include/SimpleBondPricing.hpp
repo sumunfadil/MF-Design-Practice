@@ -45,5 +45,4 @@ namespace Chapter3CPPBook // Logical grouping of functions
 
 } // namespace Chapter3CPPBook 
 
-
 #endif /* SIMPLEBONDPRICING_HPP */
