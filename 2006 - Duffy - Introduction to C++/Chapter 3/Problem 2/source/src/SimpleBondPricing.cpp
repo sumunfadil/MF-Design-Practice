@@ -80,3 +80,16 @@ double Chapter3CPPBook::PresentValueOrdinaryAnnuity(double A, long nPeriods, dou
     double factor = 1.0 + r;
     return (A / r) * (1 - (1 / Chapter3CPPBook::power(factor, nPeriods)));
 }
+
+// Conversion from rate with compounding m times per year to rate of interest with continuous compounding
+double Chapter3CPPBook::ConversionfromDiscretetoContinuous(double rm, long m)
+{
+    double factor = 1.0 + (rm / m);
+    return m * log(factor);
+}
+
+// Conversion from rate of interest with continuous compounding to the equivalent rate with compounding m times per year 
+double Chapter3CPPBook::ConvertfromContinuoustoDiscrete(double rc, long m)
+{
+    return m * (exp(rc / m) - 1);
+}

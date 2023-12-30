@@ -44,6 +44,14 @@ namespace Chapter3CPPBook // Logical grouping of functions
    // Present value of an ordinary annuity
    double PresentValueOrdinaryAnnuity(double A, long nPeriods, double r);
 
+   // Conversion from rate with compounding m times per year to rate of interest with continuous compounding
+   // rm: m times per year compounding rate
+   double ConversionfromDiscretetoContinuous(double rm, long m);
+
+   // Conversion from rate of interest with continuous compounding to the equivalent rate with compounding m times per year
+   // rc: continuous compounding interest rate
+   double ConvertfromContinuoustoDiscrete(double rc, long m);
+
 } // namespace Chapter3CPPBook 
 
 #endif /* SIMPLEBONDPRICING_HPP */

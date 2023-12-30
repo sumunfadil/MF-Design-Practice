@@ -42,6 +42,14 @@ int main()
 
     // Present value of an ordinary annuity
     cout << "PV of an ordinary annuity: " << Chapter3CPPBook::PresentValueOrdinaryAnnuity(A, nPeriods, r) << endl << endl;
+
+    double rm = 0.0625;
+    double rc = 0.08;
+
+    // Conversion from rate with compounding m times per year to rate of interest with continuous compounding
+    cout << "************ Conversions ************" << endl;
+    cout << "rm: " << rm << ", rc: " << Chapter3CPPBook::ConversionfromDiscretetoContinuous(rm, m) << endl;
+    cout << "rc: " << rc << ", rm: " << Chapter3CPPBook::ConvertfromContinuoustoDiscrete(rc, m) << endl << endl;
     
     return 0;
 }
