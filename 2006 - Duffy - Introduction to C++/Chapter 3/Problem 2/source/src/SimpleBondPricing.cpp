@@ -27,22 +27,24 @@ double Chapter3CPPBook::FutureValue(double P0, long nPeriods, double r)
 
 // Future value of sum of money invested today paid m times per year
 // r is annual interest rate
-double FutureValue(double P0, long nPeriods, double r, long m)
+double Chapter3CPPBook::FutureValue(double P0, long nPeriods, double r, long m)
 {
-    return 0.0;
+    double factor = 1.0 + (r / m);
+    return P0 * Chapter3CPPBook::power(factor, m * nPeriods);
 }
 
 // Future value of sum of money invested today with continuous compounding
 // limit as m goes to infinity
-double FutureValueContinuous(double P0, long nPeriods, double r)
+double Chapter3CPPBook::FutureValueContinuous(double P0, long nPeriods, double r)
 {
-    return 0.0;
+    return P0 * exp(r * nPeriods);
 }
 
 // Future value of an ordinary annuity
-double OrdinaryAnnuity(double A, long nPeriods, double r)
+double Chapter3CPPBook::OrdinaryAnnuity(double A, long nPeriods, double r)
 {
-    return 0.0;
+    double factor = 1.0 + r;
+    return A * (Chapter3CPPBook::power(factor, nPeriods) - 1) / r;
 }
 
 /*
@@ -50,9 +52,10 @@ Present value
 */
 
 // Present value
-double PresentValue(double Pn, long nPeriods, double r)
+double Chapter3CPPBook::PresentValue(double Pn, long nPeriods, double r)
 {
-    return 0.0;
+    double factor = 1.0 + r;
+    return Pn / Chapter3CPPBook::power(factor, nPeriods);
 }
 
 // Present value of series of future values
@@ -72,7 +75,8 @@ double Chapter3CPPBook::PresentValue(const Chapter3CPPBook::Vector& prices, long
 }
 
 // Present value of an ordinary annuity
-double PresentValueOrdinaryAnnuity(double A, long nPeriods, double r)
+double Chapter3CPPBook::PresentValueOrdinaryAnnuity(double A, long nPeriods, double r)
 {
-    return 0.0;
+    double factor = 1.0 + r;
+    return (A / r) * (1 - (1 / Chapter3CPPBook::power(factor, nPeriods)));
 }

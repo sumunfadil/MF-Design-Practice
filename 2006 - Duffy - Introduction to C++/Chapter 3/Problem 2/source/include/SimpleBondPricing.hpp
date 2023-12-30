@@ -2,6 +2,7 @@
 #define SIMPLEBONDPRICING_HPP
 
 #include <vector>
+#include <math.h>
 using namespace std;
 
 namespace Chapter3CPPBook // Logical grouping of functions
