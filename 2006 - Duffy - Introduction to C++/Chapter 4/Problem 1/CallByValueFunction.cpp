@@ -11,7 +11,7 @@ double Max(double x, double y)
 
 int main()
 {
-    // Press run/ debug button for small C++ scripts
+    // Use Run/Debug button for small C++ scripts
     double d1 = 1.0;
     double d2 = -345.0;
 
