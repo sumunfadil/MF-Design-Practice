@@ -1,3 +1,5 @@
+// Use Run/Debug button for small C++ scripts
+
 #include<iostream>
 
 using namespace std;
@@ -11,7 +13,8 @@ double Max(double x, double y)
 
 int main()
 {
-    // Use Run/Debug button for small C++ scripts
+    // Passing parameters by value or parameters used in a call-by-value manner
+    // we work with copies of d1 and d2 
     double d1 = 1.0;
     double d2 = -345.0;
 
