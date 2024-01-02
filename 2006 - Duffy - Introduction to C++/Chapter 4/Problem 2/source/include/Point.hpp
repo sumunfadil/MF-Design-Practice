@@ -11,12 +11,14 @@ private:
     // Properties for x and y coordinates
     double x;
     double y;
+    double z;
 
 public:
 
     // Constructor
     Point();                      // Default constructor  
     Point(double xs, double ys);  // Parameterised constructor - call-by-value
+    Point(double xs, double ys, double zs); // Constructor using initialiser
     Point(const Point& source);   // Copy constructor - class instance by const-reference
 
     // Destructor
@@ -28,7 +30,13 @@ public:
     double Y() const; // Returns y
 
     // Modifiers (or setters)
-    // 
+    // Cannot be constant member functions since they modify the member data
+    void X(double newX); // Set X
+    void Y(double newY); // Set Y
 };
 
 #endif /* POINT_HPP */
+
+
+
+
