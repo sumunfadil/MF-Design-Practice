@@ -36,7 +36,7 @@ void Point::Y(double newY)
 
 // Member function that allows access to static object OriginPoint
 // Accessing global object
-// Returns address of OriginPoint
+// Returns reference to OriginPoint i.e. its address and not some copy 
 Point& Point::GetOriginPoint()
 {
     return OriginPoint;
