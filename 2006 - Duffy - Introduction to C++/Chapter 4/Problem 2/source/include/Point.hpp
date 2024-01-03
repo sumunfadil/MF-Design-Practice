@@ -16,6 +16,7 @@ private:
 public:
 
     // Constructor
+    // THIS IS AN EXAMPLE OF FUNCTION OVERLOADING
     Point();                      // Default constructor  
     Point(double xs, double ys);  // Parameterised constructor - call-by-value
     Point(double xs, double ys, double zs); // Constructor using initialiser

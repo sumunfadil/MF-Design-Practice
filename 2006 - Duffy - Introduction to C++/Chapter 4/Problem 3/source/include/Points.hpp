@@ -3,6 +3,8 @@
     APPLICATIONS: Static class member functions and static member data.
     GOAL: We want to create a global instance (object) of the class Point which is unique.
     DESIGN PATTERN: This is a variant of the SINGLETON pattern.
+    DIFFERENCE BETWEEN STATIC AND SINGLETON PATTERN: Static objects persist in memory for the duration of the program. Singleton is initialised only when needed
+        and can be deleted at any moment.
 */
 
 #ifndef POINTS_HPP
