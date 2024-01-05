@@ -7,8 +7,8 @@
         and can be deleted at any moment.
 */
 
-#ifndef POINTS_HPP
-#define POINTS_HPP
+#ifndef POINT_HPP
+#define POINT_HPP
 
 #include <iostream>
 
@@ -63,4 +63,5 @@ class Point //: public Shape
 
 };
 
-#endif /* POINTS_HPP */
+#endif /* POINT_HPP */
+
