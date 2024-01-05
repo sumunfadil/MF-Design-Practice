@@ -44,6 +44,21 @@ Point& Point::GetOriginPoint()
 
 // Operator overload
 std::ostream& operator << (std::ostream& os, const Point& point) {
-    os << "x: " << point.x << " and y: " << point.y;
+    os << "(" << point.x << ", " << point.y << ")";
     return os;
+}
+
+Point Point::MidPoint(const Point& p2) const
+{
+    // Calculate midpoint between two points
+    Point result((x + p2.x)*0.5, (y + p2.y)*0.5);
+    return result;
+}
+
+Point Point::MidPoint2(const Point& p2) const
+{
+    // Create an anonymous object
+    // Not a named object
+    // Call constructor and let compiler create a name for us
+    return Point((x + p2.x)*0.5, (y + p2.y)*0.5);
 }

@@ -53,6 +53,13 @@ class Point //: public Shape
 
         // Operator overload
         friend std::ostream& operator << (std::ostream& os, const Point& point);
+
+        Point MidPoint(const Point& p2) const;
+
+        // Anonymous objects - member functions producing an object of a class a return type
+        // We do this by directly returning an object
+        Point MidPoint2(const Point& p2) const;
+
 };
 
 #endif /* POINTS_HPP */
