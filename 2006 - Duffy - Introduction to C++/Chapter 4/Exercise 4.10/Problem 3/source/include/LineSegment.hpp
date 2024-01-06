@@ -36,7 +36,7 @@ public:
     Point midPoint() const;             // MidPoint of line
 
     // Print a line, the code is "default" inline
-    void print() {cout << e1 << "," << e2 << endl; }
+    void print() {cout << "l1 starts at " << e1 << " and ends at " << e2 << endl;}
 
 };
 
