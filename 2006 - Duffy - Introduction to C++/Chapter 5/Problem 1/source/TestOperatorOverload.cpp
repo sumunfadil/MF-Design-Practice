@@ -13,6 +13,7 @@ int main()
     // Generate many dates
     for (int i = 0; i < 12; i++)
     {
+        // Overload of - operator
         current = fixed - (i * interval);
         cout << current << endl;
     }
@@ -20,6 +21,8 @@ int main()
     // Add and subtract periods to dates
     cout << "\nOffset dates:\n";
     DatasimDate today;
+    
+    // Overload of << operator
     cout << "Today: " << today << endl;
 
     // Add period
