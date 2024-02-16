@@ -6,3 +6,4 @@ Authors:
     - 2006 - Duffy - Introduction to C++
     - 2009 - Duffy - Monte Carlo Frameworks
     - 2018 - Duffy - Financial Instrument Pricing
+    - 2012 - Capinski - Numerical Methods in Finance
