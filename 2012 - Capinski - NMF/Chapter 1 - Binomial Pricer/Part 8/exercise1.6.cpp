@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void interchange(double& a, double& b)
+void swap(double& a, double& b)
 {
     double temp;
     temp = a;
@@ -10,25 +10,33 @@ void interchange(double& a, double& b)
     b = temp;
 }
 
-void bubblesort(double arr[])
+void bubblesort(double arr[], int N)
 {
-    int N = sizeof(arr) / sizeof(arr[0]);
-
+    bool swapped;
     for (int i = 0; i < N-1; i++)
     {
-        for (int j = 0; j < N-i; j++)
+        swapped = false;
+
+        for (int j = 0; j < N-i-1; j++)
         {
-            if (arr[j] > arr[j+1]) interchange(arr[j], arr[j+1]);
+            if (arr[j] > arr[j+1]) swap(arr[j], arr[j+1]);
+            swapped = true;
         }
-    }
+
+        if (swapped == false) break;
+    } 
+
 }
 
-void printArray(double arr[])
+void printArray(double arr[], int size)
 {
-    int N = sizeof(arr) / sizeof(arr[0]);
-    int i;
-    for (i = 0; i < N; i++)
+    for (int i = 0; i < size; i++)
+    {
         cout << " " << arr[i];
+    }
+    
+    cout << endl;
+
 }
 
 int main()
@@ -37,14 +45,16 @@ int main()
     cout << "a = " << a << endl;
     cout << "b = " << b << endl;
     cout << "Calling interchange(): \n";
-    interchange(a,b);
+    swap(a,b);
     cout << "a = " << a << endl;
     cout << "b = " << b << endl;
 
     double arr[] = { 64, 34, 25, 12, 22, 11, 90};
-    printArray(arr);
-    bubblesort(arr);
-    printArray(arr);
+    cout << "Before bubblesort: " << endl;
+    printArray(arr, 7);
+    bubblesort(arr, 7);
+    cout << "After bubblesort: " << endl;
+    printArray(arr, 7);
 
 
     return 0;
