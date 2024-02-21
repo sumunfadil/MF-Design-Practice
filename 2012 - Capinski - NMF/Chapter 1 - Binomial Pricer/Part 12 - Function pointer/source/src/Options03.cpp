@@ -24,7 +24,7 @@ double PriceByCRR(double S0, double U, double D,
     for (int i=0; i<=N; i++)
     {
         // Calculate payoff at time N for each state
-        Price[i] = Payoff(S(S0,D,U,N,i), K);
+        Price[i] = Payoff(S(S0,D,U,N,i), K); // Replace by function pointer Payoff
     }
 
     // Perform a backwards recursion from n=N-1 to N=0
@@ -40,13 +40,3 @@ double PriceByCRR(double S0, double U, double D,
 
 }
 
-double CallPayoff(double z, double K)
-{
-    if (z>K) return z-K;
-    return 0.0;
-}
-
-double PutPayoff(double z, double K)
-{
-    return (K>z) ? K-z : 0.0;
-}

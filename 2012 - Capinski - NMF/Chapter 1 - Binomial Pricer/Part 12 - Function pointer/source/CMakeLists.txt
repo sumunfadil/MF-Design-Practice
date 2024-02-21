@@ -7,7 +7,7 @@ project(FunctionPointerApp
 
 # Target
 add_executable(FunctionPointerApp Main07.cpp
-        src/BinModel01.cpp src/Options03.cpp)
+        src/BinModel01.cpp src/Options03.cpp src/Payoff.cpp)
 
 target_compile_features(FunctionPointerApp PRIVATE cxx_std_20)
 
