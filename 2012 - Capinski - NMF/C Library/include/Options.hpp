@@ -9,5 +9,4 @@ double PriceByCRR(double S0, double U, double D,
                   double R, int N, double K,
                   double (*Payoff)(double z, double K));
 
-
 #endif /* OPTIONS03_HPP */
