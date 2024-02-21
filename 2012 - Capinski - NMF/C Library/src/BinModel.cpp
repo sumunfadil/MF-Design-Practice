@@ -3,7 +3,7 @@
 
 using namespace std;
 
-double riskNeutralProbability(double D, double R, double U)
+double RiskNeutralProbability(double D, double R, double U)
 {
     return (R-D)/(U-D);
 }

@@ -2,7 +2,7 @@
 #define BINMODEL_HPP
 
 
-double riskNeutralProbability(double D, double R, double U);
+double RiskNeutralProbability(double D, double R, double U);
 
 double S(double S0, double D, double U, int n, int i);
 
