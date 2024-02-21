@@ -18,7 +18,7 @@ double PriceByCRR(double S0, double U, double D,
                   double R, int N, double K,
                   double (*Payoff)(double z, double K))
 {
-    double q = riskNeutralProbability(D, R, U);
+    double q = RiskNeutralProbability(D, R, U);
     double Price[N+1];  
 
     for (int i=0; i<=N; i++)
@@ -40,13 +40,3 @@ double PriceByCRR(double S0, double U, double D,
 
 }
 
-double CallPayoff(double z, double K)
-{
-    if (z>K) return z-K;
-    return 0.0;
-}
-
-double PutPayoff(double z, double K)
-{
-    return (K>z) ? K-z : 0.0;
-}
