@@ -48,7 +48,7 @@ int BinModel::GetInputData()
 }
 
 
-double BinModel::getR()
+double BinModel::GetR()
 {
     return R;
 }

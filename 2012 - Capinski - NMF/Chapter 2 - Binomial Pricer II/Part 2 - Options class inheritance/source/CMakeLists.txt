@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(Name_App
+project(OptionsClassApp
     VERSION 1.0
     DESCRIPTION "Description"
     LANGUAGES CXX)
 
 # Target
-add_executable(name_Binary test.cpp
-        src/include.cpp)
+add_executable(OptionsClassApp Main09.cpp
+        src/BinModel02.cpp src/Options05.cpp)
 
-target_compile_features(name_Binary PRIVATE cxx_std_20)
+target_compile_features(OptionsClassApp PRIVATE cxx_std_20)
 
-target_include_directories(name_Binary PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(OptionsClassApp PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

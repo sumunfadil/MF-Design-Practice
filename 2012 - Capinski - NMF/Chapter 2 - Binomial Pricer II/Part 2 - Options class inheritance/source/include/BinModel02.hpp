@@ -20,7 +20,7 @@ public:
     int GetInputData();
 
     // Getter
-    double getR();
+    double GetR();
 };
 
 #endif /* BINMODEL02_HPP */

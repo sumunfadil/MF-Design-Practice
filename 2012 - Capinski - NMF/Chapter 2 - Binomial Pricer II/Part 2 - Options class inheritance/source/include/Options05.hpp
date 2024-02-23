@@ -12,14 +12,14 @@ class EuropeanOption
     private:
         int N;                                  // steps to expiry
         // Arbitrary European payoffs
-        double (*Payoff)(double z, double K)    // Pointer to payoff funtion 
+        double (*Payoff)(double z, double K);    // Pointer to payoff funtion 
 
     public:
-        // Setter   
-        void SetN(int N_) {N = N_};             
-        void SetPayoff(double (*Payoff_)(double z, double K)) {Payoff = Payoff_};
+        // Setter (already implemented)
+        void SetN(int N_) {N = N_;}           
+        void SetPayoff(double (*Payoff_)(double z, double K)) {Payoff = Payoff_;}
         
-        // European option price
+        // European option price (signature)
         double PriceByCRR(BinModel Model, double K);
 };
 
@@ -36,11 +36,11 @@ class Call : public EuropeanOption
     private:
         double K;   // Strike price
     public:
-        // Default constructor
+        // Default constructor (already implemented)
         Call() {SetPayoff(CallPayoff);} 
         // here function definition is given due to its brevity
 
-        // Getter
+        // Getter (already implemented)
         double GetK() {return K;}
 
         int GetInputData();
@@ -66,6 +66,6 @@ class Put : public EuropeanOption
         double GetK() {return K;}
 
         int GetInputData();
-}
+};
 
 #endif /* OPTIONS05_HPP */
