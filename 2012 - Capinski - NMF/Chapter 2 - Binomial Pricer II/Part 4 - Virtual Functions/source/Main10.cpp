@@ -21,5 +21,9 @@ int main()
     cout << "European put price: " 
          << PutOption.PriceByCRR(Model) << endl << endl;
 
+    EuropeanOption Option;
+    cout << "European option virtual funtion returns: " << Option.Payoff(1.0) << endl << endl;
+    //cout << "European option price: " << Option.PriceByCRR(Model) << endl << endl;
+
     return 0;
 }
