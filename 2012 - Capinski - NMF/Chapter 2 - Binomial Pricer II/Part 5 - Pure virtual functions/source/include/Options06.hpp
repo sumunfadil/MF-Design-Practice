@@ -3,6 +3,7 @@
 
 #include "BinModel02.hpp"
 
+// EuropeanOption is an abstract class since it contains a pure virtual function
 class EuropeanOption
 {
     private:
@@ -18,7 +19,7 @@ class EuropeanOption
                 - If not implemented in derived class, use definition of base class
                 - iF you remove the virtual keyword, Payoff would return 0.0 every time
         */
-        virtual double Payoff(double z) {return 0.0;}
+        //virtual double Payoff(double z) {return 0.0;}
 
         /*
             Pure virtual function:
@@ -29,7 +30,7 @@ class EuropeanOption
                   (e.g. EuropeanOption Option1; is not allowed)
                 - Better to use pure virtual functions to avoid redundant code
         */
-        //virtual double Payoff(double z) = 0;
+        virtual double Payoff(double z) = 0;
 
         // European option price
         double PriceByCRR(BinModel Model);

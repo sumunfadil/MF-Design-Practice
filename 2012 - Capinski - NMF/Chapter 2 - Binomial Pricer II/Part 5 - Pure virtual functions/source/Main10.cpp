@@ -23,9 +23,8 @@ int main()
          << PutOption.PriceByCRR(Model) << endl << endl;
      // PutOption is a EuropeanOption, so it can access PriceByCRR
 
-    EuropeanOption Option;
-    cout << "European option virtual funtion returns: " << Option.Payoff(1.0) << endl << endl;
-    //cout << "European option price: " << Option.PriceByCRR(Model) << endl << endl;
-
+    // Note: EuropeanOption is an abstract class, so we can't declare an object of that class!
+    //EuropeanOption Option;
+    //cout << "European option virtual funtion returns: " << Option.Payoff(1.0) << endl << endl;
     return 0;
 }
